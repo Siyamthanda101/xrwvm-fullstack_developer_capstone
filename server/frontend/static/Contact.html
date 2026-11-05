@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Best Cars</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    .contact-page {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1.25rem;
+    }
+
+    .contact-header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .contact-header h1 {
+      color: #172554;
+      font-weight: 700;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .contact-card {
+      padding: 1.5rem;
+      border: 1px solid #dbe3ee;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 14px rgba(23, 37, 84, 0.08);
+    }
+
+    .contact-card h2 {
+      margin-bottom: 0.75rem;
+      color: #0f766e;
+      font-size: 1.25rem;
+    }
+
+    .contact-card a {
+      color: #172554;
+    }
+
+    .contact-note {
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      border-left: 4px solid #0f766e;
+      background: #f0fdfa;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: darkturquoise; min-height: 1in;">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="/">Best Cars</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/contact/">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="contact-page">
+    <header class="contact-header">
+      <h1>Let’s find your next car</h1>
+      <p>Questions about a vehicle or ready to book a test drive? Our team is happy to help.</p>
+    </header>
+
+    <section class="contact-grid" aria-label="Contact information">
+      <article class="contact-card">
+        <h2>Call us</h2>
+        <p><a href="tel:+18005550142">+1 (800) 555-0142</a></p>
+        <p>Speak with our sales team during business hours.</p>
+      </article>
+      <article class="contact-card">
+        <h2>Email us</h2>
+        <p><a href="mailto:hello@bestcars.example">hello@bestcars.example</a></p>
+        <p>We usually reply within one business day.</p>
+      </article>
+      <article class="contact-card">
+        <h2>Visit the showroom</h2>
+        <p>2400 Market Street<br>Salt Lake City, UT 84101</p>
+        <p>Monday–Saturday, 9:00 a.m.–6:00 p.m.</p>
+      </article>
+    </section>
+
+    <p class="contact-note">Planning a visit? Call ahead and we’ll have your chosen vehicle ready for a test drive.</p>
+  </main>
+</body>
+</html>
