@@ -1,0 +1,357 @@
+2026-11-05T12:51:13.5440332Z Current runner version: '2.338.2'
+2026-11-05T12:51:13.5476974Z ##[group]Runner Image Provisioner
+2026-11-05T12:51:13.5478290Z Hosted Compute Agent
+2026-11-05T12:51:13.5479395Z Version: 20261028.624
+2026-11-05T12:51:13.5480423Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-05T12:51:13.5481711Z Build Date: 2026-10-28T21:51:42Z
+2026-11-05T12:51:13.5482936Z Worker ID: {7cb25586-56c0-42e6-a64f-659fd0139476}
+2026-11-05T12:51:13.5484376Z Region: eastus2
+2026-11-05T12:51:13.5485468Z Cloud: Azure
+2026-11-05T12:51:13.5486439Z ##[endgroup]
+2026-11-05T12:51:13.5489348Z ##[group]Operating System
+2026-11-05T12:51:13.5490591Z Ubuntu
+2026-11-05T12:51:13.5491555Z 24.04.5
+2026-11-05T12:51:13.5492562Z LTS
+2026-11-05T12:51:13.5493476Z ##[endgroup]
+2026-11-05T12:51:13.5494739Z ##[group]Runner Image
+2026-11-05T12:51:13.5496094Z Image: ubuntu-24.04
+2026-11-05T12:51:13.5497176Z Version: 20261101.360.1
+2026-11-05T12:51:13.5500026Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-05T12:51:13.5502935Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-05T12:51:13.5505228Z ##[endgroup]
+2026-11-05T12:51:13.5507415Z ##[group]GITHUB_TOKEN Permissions
+2026-11-05T12:51:13.5510596Z Contents: read
+2026-11-05T12:51:13.5511743Z Metadata: read
+2026-11-05T12:51:13.5512929Z Packages: read
+2026-11-05T12:51:13.5513913Z ##[endgroup]
+2026-11-05T12:51:13.5517113Z Secret source: Actions
+2026-11-05T12:51:13.5518757Z Cache mode: write
+2026-11-05T12:51:13.5520295Z Prepare workflow directory
+2026-11-05T12:51:13.5996221Z Prepare all required actions
+2026-11-05T12:51:13.6068650Z Getting action download info
+2026-11-05T12:51:13.8382505Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-05T12:51:13.9490014Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-05T12:51:14.0284564Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-05T12:51:14.2257808Z Complete job name: build-and-test
+2026-11-05T12:51:14.3135361Z ##[group]Run actions/checkout@v4
+2026-11-05T12:51:14.3136271Z with:
+2026-11-05T12:51:14.3136854Z   repository: Siyamthanda101/xrwvm-fullstack_developer_capstone
+2026-11-05T12:51:14.3140702Z   token: ***
+2026-11-05T12:51:14.3141138Z   ssh-strict: true
+2026-11-05T12:51:14.3141573Z   ssh-user: git
+2026-11-05T12:51:14.3142026Z   persist-credentials: true
+2026-11-05T12:51:14.3142522Z   clean: true
+2026-11-05T12:51:14.3142971Z   sparse-checkout-cone-mode: true
+2026-11-05T12:51:14.3143493Z   fetch-depth: 1
+2026-11-05T12:51:14.3143921Z   fetch-tags: false
+2026-11-05T12:51:14.3144565Z   show-progress: true
+2026-11-05T12:51:14.3145021Z   lfs: false
+2026-11-05T12:51:14.3145444Z   submodules: false
+2026-11-05T12:51:14.3145895Z   set-safe-directory: true
+2026-11-05T12:51:14.3146400Z   allow-unsafe-pr-checkout: false
+2026-11-05T12:51:14.3147187Z ##[endgroup]
+2026-11-05T12:51:14.5752006Z Syncing repository: Siyamthanda101/xrwvm-fullstack_developer_capstone
+2026-11-05T12:51:14.5755900Z ##[group]Getting Git version info
+2026-11-05T12:51:14.5757739Z Working directory is '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
+2026-11-05T12:51:14.5759294Z [command]/usr/bin/git version
+2026-11-05T12:51:14.5863185Z git version 2.56.0
+2026-11-05T12:51:14.5920482Z ##[endgroup]
+2026-11-05T12:51:14.5938800Z Temporarily overriding HOME='/home/runner/work/_temp/c999623a-7f3a-4042-b7e3-0d2db4363c77' before making global git config changes
+2026-11-05T12:51:14.5942207Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-05T12:51:14.5946212Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-11-05T12:51:14.6015831Z Deleting the contents of '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
+2026-11-05T12:51:14.6056290Z ##[group]Initializing the repository
+2026-11-05T12:51:14.6059888Z [command]/usr/bin/git init /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-11-05T12:51:14.6190957Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-05T12:51:14.6192963Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-05T12:51:14.6194410Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-05T12:51:14.6195548Z hint: call:
+2026-11-05T12:51:14.6196303Z hint:
+2026-11-05T12:51:14.6196988Z hint: 	git config --global init.defaultBranch <name>
+2026-11-05T12:51:14.6198124Z hint:
+2026-11-05T12:51:14.6199330Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-05T12:51:14.6201126Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-05T12:51:14.6202318Z hint:
+2026-11-05T12:51:14.6202822Z hint: 	git branch -m <name>
+2026-11-05T12:51:14.6203416Z hint:
+2026-11-05T12:51:14.6204951Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-05T12:51:14.6207016Z Initialized empty Git repository in /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone/.git/
+2026-11-05T12:51:14.6224428Z [command]/usr/bin/git remote add origin https://github.com/Siyamthanda101/xrwvm-fullstack_developer_capstone
+2026-11-05T12:51:14.6271772Z ##[endgroup]
+2026-11-05T12:51:14.6272676Z ##[group]Disabling automatic garbage collection
+2026-11-05T12:51:14.6274289Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-05T12:51:14.6316202Z ##[endgroup]
+2026-11-05T12:51:14.6317380Z ##[group]Setting up auth
+2026-11-05T12:51:14.6325409Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-05T12:51:14.6370624Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-05T12:51:14.6829426Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-05T12:51:14.6879193Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-05T12:51:14.7132924Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-05T12:51:14.7181057Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-05T12:51:14.7423947Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-05T12:51:14.7472904Z ##[endgroup]
+2026-11-05T12:51:14.7485362Z ##[group]Fetching the repository
+2026-11-05T12:51:14.7487068Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +56f784ec1e13a7efa58ae3b318334d1a1348c86d:refs/remotes/origin/main
+2026-11-05T12:51:15.0238789Z From https://github.com/Siyamthanda101/xrwvm-fullstack_developer_capstone
+2026-11-05T12:51:15.0241762Z  * [new ref]         56f784ec1e13a7efa58ae3b318334d1a1348c86d -> origin/main
+2026-11-05T12:51:15.0247139Z ##[endgroup]
+2026-11-05T12:51:15.0249293Z ##[group]Determining the checkout info
+2026-11-05T12:51:15.0253384Z ##[endgroup]
+2026-11-05T12:51:15.0254994Z [command]/usr/bin/git sparse-checkout disable
+2026-11-05T12:51:15.0315266Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-05T12:51:15.0358026Z ##[group]Checking out the ref
+2026-11-05T12:51:15.0362952Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-05T12:51:15.0554820Z Switched to a new branch 'main'
+2026-11-05T12:51:15.0560493Z branch 'main' set up to track 'origin/main'.
+2026-11-05T12:51:15.0568039Z ##[endgroup]
+2026-11-05T12:51:15.0616225Z [command]/usr/bin/git log -1 --format=%H
+2026-11-05T12:51:15.0650470Z 56f784ec1e13a7efa58ae3b318334d1a1348c86d
+2026-11-05T12:51:15.1062277Z ##[group]Run actions/setup-python@v5
+2026-11-05T12:51:15.1063565Z with:
+2026-11-05T12:51:15.1064658Z   python-version: 3.12
+2026-11-05T12:51:15.1065722Z   check-latest: false
+2026-11-05T12:51:15.1076056Z   token: ***
+2026-11-05T12:51:15.1077053Z   update-environment: true
+2026-11-05T12:51:15.1155798Z   allow-prereleases: false
+2026-11-05T12:51:15.1157179Z   freethreaded: false
+2026-11-05T12:51:15.1158277Z ##[endgroup]
+2026-11-05T12:51:15.2558427Z ##[group]Installed versions
+2026-11-05T12:51:15.2651447Z (node:2341) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-05T12:51:15.2656469Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-05T12:51:15.2659537Z Successfully set up CPython (3.12.16)
+2026-11-05T12:51:15.2662638Z ##[endgroup]
+2026-11-05T12:51:15.2918465Z ##[group]Run python -m pip install -r requirements.txt
+2026-11-05T12:51:15.2921292Z [36;1mpython -m pip install -r requirements.txt[0m
+2026-11-05T12:51:15.2981017Z shell: /usr/bin/bash -e {0}
+2026-11-05T12:51:15.2982772Z env:
+2026-11-05T12:51:15.2984856Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:15.2987995Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-05T12:51:15.2991151Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:15.2994324Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:15.2997366Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:15.3000671Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-05T12:51:15.3003081Z ##[endgroup]
+2026-11-05T12:51:16.5478417Z Collecting requests (from -r requirements.txt (line 1))
+2026-11-05T12:51:16.6055218Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-11-05T12:51:16.6771961Z Collecting Django (from -r requirements.txt (line 2))
+2026-11-05T12:51:16.6842530Z   Downloading django-6.1.3-py3-none-any.whl.metadata (3.9 kB)
+2026-11-05T12:51:16.8903425Z Collecting Pillow (from -r requirements.txt (line 3))
+2026-11-05T12:51:16.8979868Z   Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-11-05T12:51:16.9237104Z Collecting gunicorn (from -r requirements.txt (line 4))
+2026-11-05T12:51:16.9308692Z   Downloading gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+2026-11-05T12:51:16.9531281Z Collecting python-dotenv (from -r requirements.txt (line 5))
+2026-11-05T12:51:16.9604274Z   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+2026-11-05T12:51:17.1001993Z Collecting charset_normalizer<4,>=2 (from requests->-r requirements.txt (line 1))
+2026-11-05T12:51:17.1080813Z   Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+2026-11-05T12:51:17.1298512Z Collecting idna<4,>=2.5 (from requests->-r requirements.txt (line 1))
+2026-11-05T12:51:17.1370730Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-11-05T12:51:17.1613367Z Collecting urllib3<3,>=1.26 (from requests->-r requirements.txt (line 1))
+2026-11-05T12:51:17.1695076Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-11-05T12:51:17.1910034Z Collecting certifi>=2023.5.7 (from requests->-r requirements.txt (line 1))
+2026-11-05T12:51:17.1981095Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+2026-11-05T12:51:17.2187269Z Collecting asgiref>=3.9.1 (from Django->-r requirements.txt (line 2))
+2026-11-05T12:51:17.2258420Z   Downloading asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+2026-11-05T12:51:17.2422953Z Collecting sqlparse>=0.5.0 (from Django->-r requirements.txt (line 2))
+2026-11-05T12:51:17.2496585Z   Downloading sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+2026-11-05T12:51:17.2629193Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-11-05T12:51:17.2726849Z Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+2026-11-05T12:51:17.2874873Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-11-05T12:51:17.2965242Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-11-05T12:51:17.3058881Z Downloading django-6.1.3-py3-none-any.whl (8.4 MB)
+2026-11-05T12:51:17.3425730Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 243.7 MB/s  0:00:00
+2026-11-05T12:51:17.3508170Z Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+2026-11-05T12:51:17.3778790Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 293.9 MB/s  0:00:00
+2026-11-05T12:51:17.3849512Z Downloading gunicorn-26.2.0-py3-none-any.whl (228 kB)
+2026-11-05T12:51:17.3946960Z Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+2026-11-05T12:51:17.4036519Z Downloading asgiref-3.13.0-py3-none-any.whl (27 kB)
+2026-11-05T12:51:17.4133997Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+2026-11-05T12:51:17.4232101Z Downloading sqlparse-0.6.1-py3-none-any.whl (51 kB)
+2026-11-05T12:51:17.5631012Z Installing collected packages: urllib3, sqlparse, python-dotenv, Pillow, idna, gunicorn, charset_normalizer, certifi, asgiref, requests, Django
+2026-11-05T12:51:20.2463469Z 
+2026-11-05T12:51:20.2481052Z Successfully installed Django-6.1.3 Pillow-13.0.0 asgiref-3.13.0 certifi-2026.10.23 charset_normalizer-3.5.2 gunicorn-26.2.0 idna-3.20 python-dotenv-1.2.4 requests-2.34.2 sqlparse-0.6.1 urllib3-2.8.0
+2026-11-05T12:51:20.2490551Z 
+2026-11-05T12:51:20.2490859Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+2026-11-05T12:51:20.2491475Z [notice] To update, run: pip install --upgrade pip
+2026-11-05T12:51:20.3117732Z ##[group]Run python manage.py check
+2026-11-05T12:51:20.3118102Z [36;1mpython manage.py check[0m
+2026-11-05T12:51:20.3118396Z [36;1mpython manage.py migrate --noinput[0m
+2026-11-05T12:51:20.3140110Z shell: /usr/bin/bash -e {0}
+2026-11-05T12:51:20.3140370Z env:
+2026-11-05T12:51:20.3140636Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:20.3141095Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-05T12:51:20.3141525Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:20.3141906Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:20.3142285Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:20.3142669Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-05T12:51:20.3142993Z ##[endgroup]
+2026-11-05T12:51:21.0067541Z System check identified some issues:
+2026-11-05T12:51:21.0068253Z 
+2026-11-05T12:51:21.0068408Z WARNINGS:
+2026-11-05T12:51:21.0069655Z ?: (staticfiles.W004) The directory '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone/server/frontend/build' in the STATICFILES_DIRS setting does not exist.
+2026-11-05T12:51:21.0072170Z ?: (staticfiles.W004) The directory '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone/server/frontend/build/static' in the STATICFILES_DIRS setting does not exist.
+2026-11-05T12:51:21.0073542Z 
+2026-11-05T12:51:21.0073753Z System check identified 2 issues (0 silenced).
+2026-11-05T12:51:21.3651196Z System check identified some issues:
+2026-11-05T12:51:21.3651613Z 
+2026-11-05T12:51:21.3651809Z WARNINGS:
+2026-11-05T12:51:21.3653172Z ?: (staticfiles.W004) The directory '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone/server/frontend/build' in the STATICFILES_DIRS setting does not exist.
+2026-11-05T12:51:21.3655998Z ?: (staticfiles.W004) The directory '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone/server/frontend/build/static' in the STATICFILES_DIRS setting does not exist.
+2026-11-05T12:51:21.3752311Z Operations to perform:
+2026-11-05T12:51:21.3752921Z   Apply all migrations: admin, auth, contenttypes, sessions
+2026-11-05T12:51:21.3753906Z Running migrations:
+2026-11-05T12:51:21.3799862Z   Applying contenttypes.0001_initial... OK
+2026-11-05T12:51:21.3930968Z   Applying auth.0001_initial... OK
+2026-11-05T12:51:21.4006782Z   Applying admin.0001_initial... OK
+2026-11-05T12:51:21.4092891Z   Applying admin.0002_logentry_remove_auto_add... OK
+2026-11-05T12:51:21.4165047Z   Applying admin.0003_logentry_add_action_flag_choices... OK
+2026-11-05T12:51:21.4276815Z   Applying contenttypes.0002_remove_content_type_name... OK
+2026-11-05T12:51:21.4356051Z   Applying auth.0002_alter_permission_name_max_length... OK
+2026-11-05T12:51:21.4443907Z   Applying auth.0003_alter_user_email_max_length... OK
+2026-11-05T12:51:21.4498921Z   Applying auth.0004_alter_user_username_opts... OK
+2026-11-05T12:51:21.4571704Z   Applying auth.0005_alter_user_last_login_null... OK
+2026-11-05T12:51:21.4584219Z   Applying auth.0006_require_contenttypes_0002... OK
+2026-11-05T12:51:21.4637466Z   Applying auth.0007_alter_validators_add_error_messages... OK
+2026-11-05T12:51:21.4713270Z   Applying auth.0008_alter_user_username_max_length... OK
+2026-11-05T12:51:21.4786147Z   Applying auth.0009_alter_user_last_name_max_length... OK
+2026-11-05T12:51:21.4859041Z   Applying auth.0010_alter_group_name_max_length... OK
+2026-11-05T12:51:21.4911842Z   Applying auth.0011_update_proxy_permissions... OK
+2026-11-05T12:51:21.5000606Z   Applying auth.0012_alter_user_first_name_max_length... OK
+2026-11-05T12:51:21.5276134Z   Applying sessions.0001_initial... OK
+2026-11-05T12:51:21.5897682Z ##[group]Run actions/setup-node@v4
+2026-11-05T12:51:21.5897988Z with:
+2026-11-05T12:51:21.5898193Z   node-version: 20
+2026-11-05T12:51:21.5898400Z   cache: npm
+2026-11-05T12:51:21.5898679Z   cache-dependency-path: server/frontend/package-lock.json
+2026-11-05T12:51:21.5899018Z   always-auth: false
+2026-11-05T12:51:21.5899235Z   check-latest: false
+2026-11-05T12:51:21.5901577Z   token: ***
+2026-11-05T12:51:21.5901770Z env:
+2026-11-05T12:51:21.5902038Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:21.5902501Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-05T12:51:21.5902937Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:21.5903327Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:21.5903701Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:21.5904286Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-05T12:51:21.5904657Z ##[endgroup]
+2026-11-05T12:51:21.7510814Z Attempting to download 20...
+2026-11-05T12:51:21.7662979Z (node:2383) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-05T12:51:21.7664512Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-05T12:51:22.3469236Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-11-05T12:51:22.7561362Z Extracting ...
+2026-11-05T12:51:22.7701202Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/1c3ece6f-d1d1-492c-aa6f-e795a421d39f -f /home/runner/work/_temp/b0716859-0e9d-4a14-8292-e242d04bf5e8
+2026-11-05T12:51:23.7919971Z Adding to the cache ...
+2026-11-05T12:51:25.3840072Z ##[group]Environment details
+2026-11-05T12:51:25.6207052Z node: v20.20.2
+2026-11-05T12:51:25.6207458Z npm: 10.8.2
+2026-11-05T12:51:25.6207760Z yarn: 1.22.22
+2026-11-05T12:51:25.6208463Z ##[endgroup]
+2026-11-05T12:51:25.6231856Z [command]/opt/hostedtoolcache/node/20.20.2/x64/bin/npm config get cache
+2026-11-05T12:51:25.7307776Z /home/runner/.npm
+2026-11-05T12:51:25.8252139Z npm cache is not found
+2026-11-05T12:51:25.8439210Z ##[group]Run npm ci
+2026-11-05T12:51:25.8439479Z [36;1mnpm ci[0m
+2026-11-05T12:51:25.8460599Z shell: /usr/bin/bash -e {0}
+2026-11-05T12:51:25.8460849Z env:
+2026-11-05T12:51:25.8461116Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:25.8461554Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-05T12:51:25.8462163Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:25.8462549Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:25.8462928Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:25.8463311Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-05T12:51:25.8463641Z ##[endgroup]
+2026-11-05T12:51:29.9310687Z npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+2026-11-05T12:51:30.2584822Z npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+2026-11-05T12:51:30.2587507Z npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+2026-11-05T12:51:30.4980126Z npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+2026-11-05T12:51:30.6866019Z npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+2026-11-05T12:51:33.4169980Z npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+2026-11-05T12:51:34.2386005Z npm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+2026-11-05T12:51:34.2621109Z npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+2026-11-05T12:51:34.2624998Z npm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+2026-11-05T12:51:34.2839995Z npm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+2026-11-05T12:51:34.2843771Z npm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+2026-11-05T12:51:34.2847203Z npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+2026-11-05T12:51:45.0890356Z 
+2026-11-05T12:51:45.0891197Z added 1534 packages, and audited 1535 packages in 19s
+2026-11-05T12:51:45.0891681Z 
+2026-11-05T12:51:45.0892011Z 246 packages are looking for funding
+2026-11-05T12:51:45.0892546Z   run `npm fund` for details
+2026-11-05T12:51:45.1982487Z 
+2026-11-05T12:51:45.1983357Z 80 vulnerabilities (21 low, 20 moderate, 35 high, 4 critical)
+2026-11-05T12:51:45.1983745Z 
+2026-11-05T12:51:45.1984320Z To address issues that do not require attention, run:
+2026-11-05T12:51:45.1984838Z   npm audit fix
+2026-11-05T12:51:45.1984997Z 
+2026-11-05T12:51:45.1985291Z To address all issues (including breaking changes), run:
+2026-11-05T12:51:45.1985727Z   npm audit fix --force
+2026-11-05T12:51:45.1986722Z 
+2026-11-05T12:51:45.1987022Z Run `npm audit` for details.
+2026-11-05T12:51:45.2415794Z ##[group]Run npm run build
+2026-11-05T12:51:45.2416093Z [36;1mnpm run build[0m
+2026-11-05T12:51:45.2440403Z shell: /usr/bin/bash -e {0}
+2026-11-05T12:51:45.2440658Z env:
+2026-11-05T12:51:45.2440927Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:45.2441734Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-05T12:51:45.2442332Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:45.2442740Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:45.2443148Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-05T12:51:45.2443760Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-05T12:51:45.2444356Z ##[endgroup]
+2026-11-05T12:51:45.3582246Z 
+2026-11-05T12:51:45.3582657Z > usermgmt@0.1.0 build
+2026-11-05T12:51:45.3583083Z > react-scripts build
+2026-11-05T12:51:45.3583275Z 
+2026-11-05T12:51:46.4091722Z Creating an optimized production build...
+2026-11-05T12:51:46.5087967Z Browserslist: caniuse-lite is outdated. Please run:
+2026-11-05T12:51:46.5088666Z   npx update-browserslist-db@latest
+2026-11-05T12:51:46.5089460Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2026-11-05T12:51:52.3812824Z Browserslist: caniuse-lite is outdated. Please run:
+2026-11-05T12:51:52.3814562Z   npx update-browserslist-db@latest
+2026-11-05T12:51:52.3818177Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2026-11-05T12:51:53.5647923Z Compiled successfully.
+2026-11-05T12:51:53.5648271Z 
+2026-11-05T12:51:53.5648491Z File sizes after gzip:
+2026-11-05T12:51:53.5648742Z 
+2026-11-05T12:51:53.5789006Z   59.78 kB  build/static/js/main.5c13940f.js
+2026-11-05T12:51:53.5789692Z   23.94 kB  build/static/css/main.8255f8c9.css
+2026-11-05T12:51:53.5790070Z 
+2026-11-05T12:51:53.5792149Z The project was built assuming it is hosted at /.
+2026-11-05T12:51:53.5793053Z You can control this with the homepage field in your package.json.
+2026-11-05T12:51:53.5793574Z 
+2026-11-05T12:51:53.5808384Z The build folder is ready to be deployed.
+2026-11-05T12:51:53.5809118Z You may serve it with a static server:
+2026-11-05T12:51:53.5809498Z 
+2026-11-05T12:51:53.5809655Z   npm install -g serve
+2026-11-05T12:51:53.5809943Z   serve -s build
+2026-11-05T12:51:53.5810076Z 
+2026-11-05T12:51:53.5810265Z Find out more about deployment here:
+2026-11-05T12:51:53.5810489Z 
+2026-11-05T12:51:53.5810611Z   https://cra.link/deployment
+2026-11-05T12:51:53.5810808Z 
+2026-11-05T12:51:53.6518011Z Post job cleanup.
+2026-11-05T12:51:53.7859771Z (node:2493) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-05T12:51:53.7861220Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-05T12:51:53.8133071Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone --files-from manifest.txt --use-compress-program zstdmt
+2026-11-05T12:51:54.3680873Z (node:2493) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-05T12:51:55.3595100Z Sent 50331648 of 60891952 (82.7%), 48.0 MBs/sec
+2026-11-05T12:51:55.9450220Z Sent 60891952 of 60891952 (100.0%), 36.6 MBs/sec
+2026-11-05T12:51:56.0601819Z Cache saved with the key: node-cache-Linux-x64-npm-b7e9523fb555e592bce3a1f191be132e505b0b9e30de48b12cb2b6069588e35b
+2026-11-05T12:51:56.0768087Z Post job cleanup.
+2026-11-05T12:51:56.2027856Z (node:2515) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-05T12:51:56.2029543Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-05T12:51:56.2189601Z Post job cleanup.
+2026-11-05T12:51:56.3113086Z [command]/usr/bin/git version
+2026-11-05T12:51:56.3161565Z git version 2.56.0
+2026-11-05T12:51:56.3200751Z Temporarily overriding HOME='/home/runner/work/_temp/69d226ca-0808-4f70-a576-70bf06762128' before making global git config changes
+2026-11-05T12:51:56.3202346Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-05T12:51:56.3206900Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-11-05T12:51:56.3250548Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-05T12:51:56.3296000Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-05T12:51:56.3561843Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-05T12:51:56.3592809Z http.https://github.com/.extraheader
+2026-11-05T12:51:56.3606636Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-05T12:51:56.3655999Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-05T12:51:56.3932066Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-05T12:51:56.3980822Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-05T12:51:56.4419548Z Cleaning up orphan processes
+2026-11-05T12:51:56.4804000Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
