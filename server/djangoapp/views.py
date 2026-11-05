@@ -1,65 +1,73 @@
-# Uncomment the required imports before adding the code
-
-# from django.shortcuts import render
-# from django.http import HttpResponseRedirect, HttpResponse
-# from django.contrib.auth.models import User
-# from django.shortcuts import get_object_or_404, render, redirect
-# from django.contrib.auth import logout
-# from django.contrib import messages
-# from datetime import datetime
-
-from django.http import JsonResponse
-from django.contrib.auth import login, authenticate
-import logging
 import json
+
+from django.contrib.auth import authenticate, get_user_model, login, logout
+from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-# from .populate import initiate
+from django.views.decorators.http import require_GET, require_POST
 
 
-# Get an instance of a logger
-logger = logging.getLogger(__name__)
-
-
-# Create your views here.
-
-# Create a `login_request` view to handle sign in request
 @csrf_exempt
+@require_POST
 def login_user(request):
-    # Get username and password from request.POST dictionary
-    data = json.loads(request.body)
-    username = data['userName']
-    password = data['password']
-    # Try to check if provide credential can be authenticated
-    user = authenticate(username=username, password=password)
-    data = {"userName": username}
-    if user is not None:
-        # If user is valid, call login method to login current user
-        login(request, user)
-        data = {"userName": username, "status": "Authenticated"}
-    return JsonResponse(data)
+    try:
+        data = json.loads(request.body)
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return JsonResponse({"error": "Request body must be valid JSON."}, status=400)
 
-# Create a `logout_request` view to handle sign out request
-# def logout_request(request):
-# ...
+    if not isinstance(data, dict):
+        return JsonResponse({"error": "Request body must be a JSON object."}, status=400)
 
-# Create a `registration` view to handle sign up request
-# @csrf_exempt
-# def registration(request):
-# ...
+    username = data.get("userName")
+    password = data.get("password")
+    if not isinstance(username, str) or not isinstance(password, str):
+        return JsonResponse(
+            {"error": "Both userName and password are required."},
+            status=400,
+        )
 
-# # Update the `get_dealerships` view to render the index page with
-# a list of dealerships
-# def get_dealerships(request):
-# ...
+    user = authenticate(request, username=username, password=password)
+    if user is None:
+        return JsonResponse({"userName": username, "status": "Authentication Failed"})
 
-# Create a `get_dealer_reviews` view to render the reviews of a dealer
-# def get_dealer_reviews(request,dealer_id):
-# ...
+    login(request, user)
+    return JsonResponse({"userName": username, "status": "Authenticated"})
 
-# Create a `get_dealer_details` view to render the dealer details
-# def get_dealer_details(request, dealer_id):
-# ...
 
-# Create a `add_review` view to submit a review
-# def add_review(request):
-# ...
+@require_GET
+def logout_user(request):
+    logout(request)
+    return JsonResponse({"userName": ""})
+
+
+@csrf_exempt
+@require_POST
+def registration(request):
+    try:
+        data = json.loads(request.body)
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return JsonResponse({"error": "Request body must be valid JSON."}, status=400)
+
+    if not isinstance(data, dict):
+        return JsonResponse({"error": "Request body must be a JSON object."}, status=400)
+
+    fields = ("userName", "password", "firstName", "lastName", "email")
+    if any(not isinstance(data.get(field), str) or not data[field].strip() for field in fields):
+        return JsonResponse({"error": "All registration fields are required."}, status=400)
+
+    username = data["userName"].strip()
+    email = data["email"].strip()
+    user_model = get_user_model()
+    if user_model.objects.filter(username__iexact=username).exists():
+        return JsonResponse({"userName": username, "error": "Already Registered"})
+    if user_model.objects.filter(email__iexact=email).exists():
+        return JsonResponse({"userName": username, "error": "Email already registered"})
+
+    user = user_model.objects.create_user(
+        username=username,
+        password=data["password"],
+        first_name=data["firstName"].strip(),
+        last_name=data["lastName"].strip(),
+        email=email,
+    )
+    login(request, user)
+    return JsonResponse({"userName": username, "status": "Authenticated"})
