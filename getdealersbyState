@@ -1,0 +1,4 @@
+curl -X GET "http://127.0.0.1:8000/djangoapp/get_dealers/Kansas"
+{"status": 200, "dealers": [{"id": 3, "city": "Kansas City", "full_name": "Kansas Motors", "short_name": "Kansas", "lat": 39.11, "long": -94.62, "state": "KS", "address": "123 State Avenue", "zip": "66101"}]}
+
+Note: This successful output was supplied in the user request; it was not re-run because the Django, backend, and sentiment services are currently stopped. The working Django route is /djangoapp/get_dealers/Kansas.

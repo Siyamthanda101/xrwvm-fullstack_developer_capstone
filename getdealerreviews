@@ -1,0 +1,4 @@
+curl -X GET "http://127.0.0.1:8000/djangoapp/reviews/dealer/1"
+{"status": 200, "reviews": [{"id": 1, "name": "Birgit Bertelsen", "dealership": 1, "review": "A terrific experience with this dealer!", "purchase": true, "purchase_date": "06/02/2021", "car_make": "Audi", "car_model": "A4", "car_year": 2015, "sentiment": "positive"}]}
+
+Note: This successful output was supplied in the user request; it was not re-run because the Django, backend, and sentiment services are currently stopped.

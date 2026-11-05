@@ -1,0 +1,4 @@
+curl -X GET "http://127.0.0.1:8000/djangoapp/dealer/1"
+{"status": 200, "dealer": {"id": 1, "city": "El Paso", "full_name": "Bay Ridge Motors", "short_name": "Bay Ridge", "lat": 31.78, "long": -106.44, "state": "TX", "address": "33 Dellwood Court", "zip": "79936"}}
+
+Note: This successful output was supplied in the user request; it was not re-run because the Django, backend, and sentiment services are currently stopped.
